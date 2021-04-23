@@ -1,1 +1,5 @@
-# url_shortner
+# URL_SHORTNER
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

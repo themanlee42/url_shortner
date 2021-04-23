@@ -14,7 +14,7 @@
 
 # Installing instruction on dev enviornment:
 
-1. Install PHP 7.4 or up
+1. Install PHP 7.4 or up and Apache (or any other web server)
 2. Install npm
 3. Install composer
 4. Install Mysql or MariaDB
@@ -23,12 +23,26 @@
 $ composer install
 $ npm install
 
-6. for testing locally run.
-$ php artisan serve
+6. create .env file (copy from .env.example) - set it to prodution mode
 
-7. for running unit tests
+7. complie assets using webpack 
+$ npm run prod
+
+7.5 if sh: cross-env: command not found
+remove node_modules directory and npm install again. (some weird bug)
+
+8. create database 'url_shortner'
+
+9. migrate schema 
+$  php artisan migrate
+
+10. for running unit tests
 $ ./vendor/bin/phpunit
  
+# DEMO
+Even better, I have temporally set up the demo on AWS
+http://13.56.164.18/
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
